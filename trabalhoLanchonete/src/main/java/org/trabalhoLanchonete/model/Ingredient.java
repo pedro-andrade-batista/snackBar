@@ -15,19 +15,16 @@ public class Ingredient {
 	@GeneratedValue
 	private int id;
 	private String name;
-	@ManyToMany
-	private List<Supplier> suppliers;
+
 	
 	public Ingredient() {
 		super();
-		this.suppliers = new ArrayList();
 	}
 	
-	public Ingredient(int id, String name, List<Supplier> suppliers) {
+	public Ingredient(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.suppliers = suppliers;
 	}
 	
 	public int getId() {
@@ -46,15 +43,6 @@ public class Ingredient {
 		this.name = nome;
 	}
 	
-	
-	public List<Supplier> getSuppliers() {
-		return suppliers;
-	}
-	
-	public void addSupplier(Supplier supplier) {
-		this.suppliers.add(supplier);
-	}
-
 	@Override
 	public String toString() {
 		return "Ingredient [id=" + id + ", nome=" + name + "]";

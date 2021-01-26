@@ -8,10 +8,11 @@
 <title>Agenda</title>
 </head>
 <body>
-<form method=post action=salvarContato>
+<form method=post action=saveClient>
 Id:<input type=text name=id><br>
-Nome:<input type=text name=nome><br>
-Email:<input type=text name=email><br>
+Nome:<input type=text name=name><br>
+Endereço:<input type=text name=address><br>
+Telefone:<input type=text name=phone><br>
 <input type=submit value=Adicionar>
 </form>
 <c:if test="${not empty param.nome}">

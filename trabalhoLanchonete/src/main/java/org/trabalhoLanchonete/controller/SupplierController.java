@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.trabalhoLanchonete.model.Supplier;
 
 public class SupplierController implements CrudController <Integer, Supplier>{
-
-	
+		
 	@RequestMapping("allSupplier")
 	public String clientForm() {
 		return "suppliers";
